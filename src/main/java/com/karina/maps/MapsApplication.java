@@ -1,15 +1,15 @@
 package com.karina.maps;
 
+import com.karina.maps.config.models.Saldo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Scanner;
 
 @SpringBootApplication
 public class MapsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MapsApplication.class, args);
-
+		Saldo saldos = new Saldo();
 	}
 }

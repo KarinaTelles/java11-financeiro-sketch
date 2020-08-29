@@ -50,7 +50,6 @@ public class Saldos {
                 } catch (NumberFormatException e) {
                     System.out.println("Apenas lançamento númerico, nenhum caracter é permitido");
                 }
-                //return guardaValor;
             }
         } catch (NumberFormatException e) {
             System.out.println("Apenas lançamento númerico, nenhum caracter é permitido");
