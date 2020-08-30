@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Entity
 public class Saldo implements Serializable {
     private static final long serialVersionUID = 1L;
-    //private
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
