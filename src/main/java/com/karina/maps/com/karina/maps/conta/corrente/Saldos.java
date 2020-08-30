@@ -1,22 +1,19 @@
 package com.karina.maps.com.karina.maps.conta.corrente;
 
-import io.swagger.models.auth.In;
-import org.hibernate.event.spi.SaveOrUpdateEvent;
-
 import java.util.Scanner;
 public class Saldos {
-    /*A minha entrada é "resposta"*/
+    private String id;
 
-    public int deposito() {
-        /*Isso tudo é apenas para os lançamentos depóstos*/
-        int guardaValor = 0;
+    private int guardaValor = 0;
+
+    public int lancamentoEntrada(){
         try {
             System.out.println("*****************************************");
             System.out.println("(APENAS VALORES NUMÉRICOS) Entre com o valor do seu 1° lançamento: ");
             Scanner inputValor = new Scanner(System.in);
             int valor = Integer.parseInt(inputValor.nextLine());
             if (valor == 0 || valor < 0) {
-                System.out.println("Erro: lançamentos apenas maiores que 0");
+                System.out.println("Erro: Lançamentos apenas maiores que 0");
                 System.out.println("Saldo: "+ guardaValor);
             }else {
                 System.out.println("Seu lançamento tem o valor de R$" + valor + " (esse é o lançamento número: 1)");
@@ -33,7 +30,7 @@ public class Saldos {
                         Scanner inputValorDois = new Scanner(System.in);
                         valor = Integer.parseInt(inputValorDois.nextLine());
                         if (valor == 0 || valor < 0) {
-                            System.out.println("Erro: lançamentos apenas maiores que 0");
+                            System.out.println("Erro: Lançamentos apenas maiores que 0");
                             System.out.println("Saldo: "+ guardaValor);
                         }else {
                             guardaValor = guardaValor + valor;
@@ -53,11 +50,15 @@ public class Saldos {
             System.out.println("Apenas lançamento númerico, nenhum caracter é permitido");
             System.out.println("Saldo: "+ guardaValor);
         }
-
+        System.out.println("Ultimo valor: " + guardaValor);
         return guardaValor;
     }
-
-    boolean pagamento(){
-        return true;
+    public int lancamentoSaida(int guardaValor){
+        this.guardaValor = guardaValor;
+        System.out.println("*********Esse é seu saldo atual************: "+ guardaValor + ". Entre com o valor a ser retirado:");
+        return guardaValor;
+    }
+    public int getGuardaValor() {
+        return guardaValor;
     }
 }
