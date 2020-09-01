@@ -17,6 +17,5 @@ public class MapsApplication {
 		saldo.lancamentoSaida(saldo.getGuardaValor());
 
 		Ativos ativos = new Ativos();
-		ativos.setSaldos(ativos.getSaldos());
 	}
 }
