@@ -9,15 +9,14 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Testa o fluxo de dados do saldo")
 class SaldosTest {
 
+    private String string;
+
     //Testa se o lançamento não é negativo
     @Test
-    void lancamento() {
-        Saldos saldo = new Saldos();
-        int response = saldo.getGuardaValor();
+    void lancamentoPositvo() {
+        Saldos saldos = new Saldos();
+        int response = saldos.getGuardaValor();
         assertThat(response).isNotNegative();
     }
-
-    @Test
-    void getGuardaValor() {
-    }
+    
 }
